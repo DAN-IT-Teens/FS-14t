@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: whitesmoke;
+    padding: 0 20px;
+}
+
+.news {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.news__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: grey;
+}
+
+.news__text {
+    padding: 10px;
+    background: whitesmoke;
+}
+
+@media screen and (max-width: 400px) {
+    .menu {
+        display: none;
+    }
+    .news__image{
+        width: 100%;
+        max-width: 400px;
+    }
+    .news {
+        flex-direction: column;
+    }
+}

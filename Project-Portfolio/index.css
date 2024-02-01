@@ -1,0 +1,58 @@
+.header {
+    padding-top: 380px !important;
+    padding-left: 120px;
+}
+
+.card{
+    display: flex;
+    max-width: 1200px;
+    padding-bottom: 40px;
+    border-bottom: 3px solid black;
+    gap: 60px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+.card img {
+    max-width: 50%;
+}
+
+.card-list{
+    margin: 100px 0; /* (верх-низ) (ліво-право) */
+    display: flex; /* технологія розміщення елементів */
+    /* Правила далі - керування технологією */
+    flex-direction: column; /* Змінена вісь використання - Вертикаль */
+    gap: 60px; /* Задаємо відступи між елементами flex container */
+    align-items: center; /* Розміщуємо по центру по протилежної (гориз.) осі */ 
+}
+
+.personal-info-image{
+    opacity: 0.8;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), radial-gradient(87.39% 86.44% at 69.24% 0%, #F3A8FF 0%, #FFB2CA 0.01%, rgba(185, 255, 200, 0.00) 100%), radial-gradient(114.56% 110.9% at 21.63% 0%, #9AB8FF 0%, rgba(169, 255, 240, 0.00) 100%), radial-gradient(129.77% 91.6% at 56.53% 107.7%, #A8FFE0 0%, rgba(255, 255, 255, 0.00) 100%), rgba(196, 196, 196, 0.10);
+}
+
+.personal-info{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.personal-info-image img {
+    padding: 130px;
+}
+
+.personal-info-text{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 540px;
+}
+
+.personal-info-text p{
+    line-height: 15px;
+}

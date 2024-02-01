@@ -1,0 +1,35 @@
+.default-button {
+    border: none;
+    padding: 20px 30px;
+    margin: 50px;
+    background: cornflowerblue;
+    color: white;
+    transition: background 0.5s;
+}
+
+.default-button:hover{
+    transition: background 0.5s;
+    background: blue;
+}
+
+.card {
+    margin: 30px;
+    padding: 15px;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    color: blueviolet;
+    text-align: center;
+}
+
+.card:hover .card-title {
+    color: black;
+    transition: color 2s;
+}
+
+.card-title{
+    transition: color 2s;
+}
+
+.card-description {
+
+}

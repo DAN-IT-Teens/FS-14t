@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), radial-gradient(87.39% 86.44% at 69.24% 0%, #F3A8FF 0%, #FFB2CA 0.01%, rgba(185, 255, 200, 0.00) 100%), radial-gradient(114.56% 110.9% at 21.63% 0%, #9AB8FF 0%, rgba(169, 255, 240, 0.00) 100%), radial-gradient(129.77% 91.6% at 56.53% 107.7%, #A8FFE0 0%, rgba(255, 255, 255, 0.00) 100%), rgba(196, 196, 196, 0.10);
+}
+
+.header p {
+    font-size: 60px;
+    line-height: 72px;
+}
+
+body{
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.main h5{
+    text-transform: uppercase;
+}

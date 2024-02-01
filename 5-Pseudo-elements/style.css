@@ -1,0 +1,70 @@
+h2::selection{
+    color: red;
+    background: blueviolet;
+}
+
+
+button{
+    color: red !important;
+}
+
+h2::first-line{
+    background: antiquewhite;
+}
+
+h2::first-letter{
+    font-size: 100px;
+    color: aqua;
+    background: black;
+}
+
+input::placeholder{
+    color: red;
+    background: beige;
+}
+
+
+h2::after{
+    content: "   AFTER";
+}
+
+h2::before{
+    content: "BEFORE   ";
+}
+
+
+
+.container{
+    width: 400px;
+}
+
+.card{
+    /*  300px */
+    width: 50%;
+    height: 50px;
+    background-color: red;
+}
+
+.list{
+    /* 50px */
+    background-color: blue;
+    width: 25%;
+    height: 50px;
+}
+
+button{
+    color: antiquewhite;
+    background: burlywood;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.h2{
+    font-family: 'Roboto', sans-serif;
+}
