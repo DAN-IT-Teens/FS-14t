@@ -3,19 +3,43 @@
 let username;
 let password;
 let errors;
+let isRegistation;
 
-username = prompt("Введіть ваш логін");
+isRegistation = confirm("У вас є аккаунт на нашому сайті?");
 
-if(username) {
-    password = prompt("Введіть ваш пароль");
+if(isRegistation) {
+    username = prompt("Введіть ваш логін");
+
+    if(username) {
+        password = prompt("Введіть ваш пароль");
+    } else {
+        errors = "Ви не ввели логін, оновіть сторінку та спробуйте знову!";
+    }
+    
+    if(password) {
+        alert('Вітаємо на сторінці!');
+    } else {
+        errors = "Ви не ввели пароль, оновіть сторінку та спробуйте знову!";
+    }   
 } else {
-    errors = "Ви не ввели логін, оновіть сторінку та спробуйте знову!";
-}
+    username = prompt("Введіть ваш новий логін");
 
-if(password) {
-    alert('Вітаємо на сторінці!');
-} else {
-    errors = "Ви не ввели пароль, оновіть сторінку та спробуйте знову!";
+    if(username) {
+        password = prompt("Введіть ваш пароль");
+    } else {
+        errors = "Ви не ввели логін, оновіть сторінку та спробуйте знову!";
+    }
+
+    if(password) {
+        const confirmPassword = prompt('Введіть пароль повторно');
+        if(password === confirmPassword) {
+            alert('Регістрація успішна! Вітаємо на сторінці!')
+        } else {
+            errors = 'Помилка! Паролі не співпадають. Оновіть сторінку'
+        }
+    } else {
+        errors = "Ви не ввели пароль, оновіть сторінку та спробуйте знову!";
+    }   
 }
 
 
@@ -23,5 +47,3 @@ if(password) {
 if (errors) {
     alert(errors);
 }
-
-// 
