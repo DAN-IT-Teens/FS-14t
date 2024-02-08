@@ -4,3 +4,17 @@
 // Створити запит в користувача порядковий номер масиву
 // Та потім опираючись на відповідь користувача, змінювати значення по порядковому номеру в масиві.
 // ** Створити перевірки.
+
+const arrVegetables = ['огірок', "помідор", "капуста", "морква",]
+
+alert(`Загальна кількість овочів: ${arrVegetables.length}. Список: ${arrVegetables}`);
+
+const selectedIndex = prompt("Введіть номер елемента зі списку який хочете змінити: ");
+
+const selectedValue = arrVegetables[selectedIndex];
+
+const editedValue = prompt(`Ви обрали: ${selectedValue}. Введіть нове значення: `);
+
+arrVegetables[selectedIndex] = editedValue;
+
+alert(`Ви успішно відредагували "${selectedValue}" на "${editedValue}". Список: ${arrVegetables}`);
