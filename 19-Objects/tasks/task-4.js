@@ -7,30 +7,42 @@
 
 const student = {
     firstName: "Ivan",
+
     lastName: "Ivanov",
+
     tabel: {
         math: 50,
         history: 80,
         english: 100
+    },
+
+    getSubjectEval: function() {
+        let listSubjects = [];
+        
+        for(let key in student.tabel) {
+            listSubjects.push(key);
+        }
+        
+        const selectedSubject = prompt(`В студента доступні такі предмети: ${listSubjects}. Оберіть зі списку`);
+        
+        if(student.tabel.hasOwnProperty(selectedSubject)) {
+            console.log(student.tabel[selectedSubject])
+        }
+    },
+    
+    getRating: function() {
+        let sumNumbers = 0;
+        let listSubjects = [];
+        
+        for(let key in student.tabel) {
+            listSubjects.push(key);
+        }
+        
+        for(let key in student.tabel) {
+            sumNumbers += student.tabel[key];
+        }
+        
+        console.log(`Середній бал студента: ${sumNumbers / listSubjects.length}`);
     }
 }
-
-let listSubjects = [];
-let sumNumbers = 0;
-
-for(let key in student.tabel) {
-    listSubjects.push(key);
-}
-
-const selectedSubject = prompt(`В студента доступні такі предмети: ${listSubjects}. Оберіть зі списку`);
-
-if(student.tabel.hasOwnProperty(selectedSubject)) {
-    console.log(student.tabel[selectedSubject])
-}
-
-for(let key in student.tabel) {
-    sumNumbers += student.tabel[key];
-}
-
-console.log(`Середній бал студента: ${sumNumbers / listSubjects.length}`);
 
