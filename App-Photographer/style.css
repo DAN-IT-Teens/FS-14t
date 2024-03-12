@@ -49,6 +49,7 @@ body {
     max-width: 1170px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .recent-posts-card {
@@ -77,4 +78,45 @@ body {
     font-size: 14px;
     color: #5C5C5C;
     line-height: 26px;
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: #000000;
+    padding: 10px;
+}
+
+.active {
+    display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+    .menu-button {
+        display: block;
+        align-self: end;
+        margin-right: 20px;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        top: 80px;
+    }
+
+    .menu-mobile a {
+        width: 180px;
+        background: #F5F5F5;
+    }
+
+    .menu-mobile a:hover {
+        background: #E5E5E5;
+    }
 }
