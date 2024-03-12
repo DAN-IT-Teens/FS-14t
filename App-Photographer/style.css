@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    padding: 20px 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #4E4E4E;
+    transition: 0.5s all;
+}
+
+.menu a:hover {
+    transition: 0.5s all;
+    color: #57A4A4;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 40px auto;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #4E4E4E;
+}
+
+.recent-posts-list {
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.recent-posts-card {
+    display: flex;
+    gap: 20px;
+}
+
+.recent-posts-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recent-posts-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4E4E4E;
+}
+
+.recent-posts-card-info {
+    font-size: 12px;
+    color: #7C7C7C;
+}
+
+.recent-posts-card-description {
+    font-size: 14px;
+    color: #5C5C5C;
+    line-height: 26px;
+}
