@@ -3,6 +3,10 @@ body {
     padding: 20px 0;
 }
 
+.headerSwiper {
+    width: 1170px;
+}
+
 .header {
     display: flex;
     flex-direction: column;

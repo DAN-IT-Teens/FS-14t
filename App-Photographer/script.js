@@ -81,3 +81,15 @@ recentPosts.forEach((post) => {
 
     containerRecentPost.append(createdPostsCard);
 })
+
+const headerSwiper = new Swiper('.headerSwiper', {
+    pagination: {
+        el: ".swiper-pagination"
+    },
+    autoplay: {
+        delay: 5000,
+        stopOnLastSlide: true
+    },
+    effect: "cards",
+    grabCursor: true,
+})
