@@ -29,6 +29,13 @@ const recentPosts = [
     },
 ]
 
+const latestShots = [
+    "./images/post-5.png",
+    "./images/post-6.png",
+    "./images/post-7.png",
+    "./images/post-8.png",
+]
+
 
 const menuButton = document.querySelector(".menu-button");
 
@@ -82,6 +89,22 @@ recentPosts.forEach((post) => {
     containerRecentPost.append(createdPostsCard);
 })
 
+function createLastestShots(image) {
+    const shotImage = document.createElement('img');
+    shotImage.className = 'latest-shots-image';
+    shotImage.src = image;
+    return shotImage;
+}
+
+latestShots.forEach((shot) => {
+    const containerLatestShot = document.querySelector('.latest-shots-list');
+    const createdLatestShot = createLastestShots(shot);
+
+    containerLatestShot.append(createdLatestShot);
+})
+
+// Library
+
 const headerSwiper = new Swiper('.headerSwiper', {
     pagination: {
         el: ".swiper-pagination"
@@ -92,4 +115,23 @@ const headerSwiper = new Swiper('.headerSwiper', {
     },
     effect: "cards",
     grabCursor: true,
+})
+
+const instagramLink = document.querySelector('.link');
+
+instagramLink.addEventListener('click', () => {
+    swal({
+        title: "Попередження!",
+        text: "Данна дія, переведе вас на наш інстаграм аккаунт. Ви впененні?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          location.href = "https://www.instagram.com/daniteducation/";
+        } else {
+          swal("Дякуємо що залишаєтесь з нами!");
+        }
+      });
 })
