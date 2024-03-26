@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -17,9 +18,61 @@
             <div class="input">
                 <input placeholder="TESFGR" class="header-search" type="text">
             </div>
-            <img class="action-cart" src="./images/icons/icon_cart.svg" alt="">
+                    <!--Call your modal-->
+            <a class="action-cart" id="demo01" href="#animatedModal">
+                <img src="./images/icons/icon_cart.svg" alt="">
+            </a>
         </div>
     </div>
+
+    <div class="popular-now">
+
+        <div class="popular-now-list">
+            <div class="popular-now-card">
+                <img src="./images/card-1.png" alt="">
+                <div class="popular-now-card-text">
+                    <div class="card-text-left">
+                        <h2 class="card-text-title">
+                            Vanilla Latte
+                        </h2>
+                        <div class="card-text-info">
+                            <div class="info hot">Hot</div>
+                            <div class="info cold">Cold</div>
+                        </div>
+                    </div>
+                    <div class="card-text-right">
+                        <p class="card-text-price">21K</p>
+
+                        <button class="card-button-buy">
+                            <img src="./images/icons/icon_cart.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <!--DEMO01-->
+        <div id="animatedModal">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+            <div class="close-animatedModal"> 
+                CLOSE MODAL
+            </div>
+                
+            <div class="modal-content">
+                      <h1 style="text-align: center;" class="title">
+                        Корзина
+                      </h1>
+            </div>
+        </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./animatedModal.min.js"></script>
+    <script>
+        $("#demo01").animatedModal();
+      </script>
     <script src="./script.js"></script>
 </body>
 </html>
