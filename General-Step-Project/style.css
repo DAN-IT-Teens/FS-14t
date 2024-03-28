@@ -88,3 +88,28 @@
     height: 20px;
     border-radius: 0 !important;
 }
+
+.container-image {
+    position: relative;
+}
+
+.block-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    border: 2px solid black;
+    padding: 30px 20px;
+    margin: 10px;
+}
