@@ -1,0 +1,12 @@
+.card__price--red, .card__title--red {
+  color: rgb(188, 29, 29);
+}
+
+.card__description {
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: lowercase;
+  color: rgb(188, 29, 29);
+}
+
+/*# sourceMappingURL=index.css.map */
