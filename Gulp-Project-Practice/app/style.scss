@@ -1,28 +1,3 @@
-$default-red: rgb(188, 29, 29);
-
-
-%text-red {
-    color: $default-red;
-}
-
-
-.card {
-    &__title {
-        &--red {
-            @extend %text-red;
-        }
-    }
-
-    &__description {
-        font-size: 12px;
-        text-decoration: none;
-        text-transform: lowercase;
-        color: $default-red;
-    }
-
-    &__price {
-        &--red {
-            @extend %text-red;
-        }
-    }
+body {
+    font-family: "Poppins", sans-serif;
 }

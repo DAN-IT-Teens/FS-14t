@@ -1,8 +1,25 @@
 .menu {
+    display: flex;
+    gap: 20px;
 
+    &__link {
+        font-weight: 400;
+        font-size: 20px;
+        text-decoration: none;
+        color: #000000;
+        transition: 0.2s color;
+
+        &:hover {
+            transition: 0.2s color;
+            color: #80C4D3;
+        }
+        &--active {
+            font-weight: 600;
+        }
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 730px) {
     .menu {
         display: none;
     }

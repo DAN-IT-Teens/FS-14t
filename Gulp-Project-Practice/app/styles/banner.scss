@@ -1,0 +1,30 @@
+.banner {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    &__title {
+        max-width: 285px;
+        font-weight: 400; 
+        font-size: 30px;
+        &--bold {
+            font-weight: 600;
+        }
+        &--primary {
+            color: #80C4D3;
+        }
+    }
+    &__description {
+        max-width: 425px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
