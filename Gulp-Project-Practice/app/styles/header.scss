@@ -10,10 +10,25 @@
     }
 
     &__actions {
-
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
     &__theme {
 
+    }
+
+    &__button-menu {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .header {
+        &__button-menu {
+            display: block;
+        }
     }
 }

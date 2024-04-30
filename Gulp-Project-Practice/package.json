@@ -11,7 +11,8 @@
     "gulp:scripts": "gulp build-scripts",
     "gulp:html": "gulp build-html",
     "gulp:css": "gulp build-styles",
-    "start": "gulp start"
+    "start": "gulp start",
+    "dev": "gulp dev"
   },
   "keywords": [],
   "author": "",
