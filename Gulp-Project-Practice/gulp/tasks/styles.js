@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import concat from 'gulp-concat';
 import { path } from '../config/path.js';
 import gulpSass from 'gulp-sass';
-import scss from 'sass';
+import * as scss from 'sass';
 
 const sass = gulpSass(scss);
 

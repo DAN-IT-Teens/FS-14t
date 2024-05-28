@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="header__logo">LOGO</h1>
+
+        <div class="menu">
+            <a class="menu__link menu__link--active" href="#">Home</a>
+            <a class="menu__link" href="#">About us</a>
+            <a class="menu__link" href="#">Management</a>
+            <a class="menu__link" href="#">News & Event</a>
+            <a class="menu__link" href="#">Gallery</a>
+            <a class="menu__link" href="#">Contact us</a>
+        </div>
+
+        <div class="header__actions">
+            <img class="header__button-menu" src="./images/menu-button.svg" alt="">
+            <img class="header__theme" src="./images/white.svg" alt="">
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner__text">
+            <h2 class="banner__title">
+                <span class="banner__title--bold">Lorem Ipsum</span>
+                dolor
+                <span class="banner__title--primary">sit amet.</span>
+            </h2>
+            <p class="banner__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod temp incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam.
+            </p>
+            <button class="btn btn--arrow">
+                More info
+            </button>
+        </div>
+        <img class="banner__image" src="./images/banner.svg" alt="Banner Image">
+    </div>
+
+    <div class="blog">
+        <div class="blog__header">
+            <h2 class="blog__title">
+                From OUR <span class="blog__title--color">Blog</span>
+            </h2>
+        </div>
+        <div class="blog__content">
+            <div class="blog__card">
+                <img class="blog__image" src="./images/card-1.png">
+                <div class="blog__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod temp incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam.
+                </div>
+                <div class="blog__create">September 10, 2021 by Admin</div>
+                <div class="blog__comments">
+                    <img class="blog__comments-icon" src="./images/comment.svg">
+                    <p class="blog__comments-amount">10</p>
+                </div>
+            </div>
+        </div>
+        <div class="blog__footer">
+            <button class="btn btn--arrow">More Articles</button>
+        </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
