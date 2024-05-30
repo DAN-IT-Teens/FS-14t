@@ -8,6 +8,26 @@
     <title>TODO List</title>
 </head>
 <body>
+
+    <div class="form">
+        <form id="todoForm">
+            <div class="mb-3">
+              <label for="todoTitleInput" class="form-label">Title todo</label>
+              <input name="title" type="text" class="form-control" id="todoTitleInput" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="todoDescriptionInput" class="form-label">Description todo</label>
+              <input name="text" type="text" class="form-control" id="todoDescriptionInput">
+              <div id="emailHelp" class="form-text">Опис не є обовʼязковим.</div>
+            </div>
+            <div class="mb-3 form-check">
+              <input name="resolved" type="checkbox" class="form-check-input" id="todoCheckInput">
+              <label class="form-check-label" for="todoCheckInput">Позначити виконаним</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Створити задачу</button>
+          </form>
+    </div>
+
     <div class="container">
 
         <div class="card">
