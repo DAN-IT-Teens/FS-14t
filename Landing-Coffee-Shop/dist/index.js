@@ -1,11 +1,10 @@
-// import { Product, Coffee } from "./scripts/modules";
-
 class Product {
-    constructor({title, description, type, price}) {
+    constructor({title, available, additional, price, id}) {
+        this.id = id;
         this.title = title;
-        this.description = description;
-        this.type = type;
         this.price = price;
+        this.available = available;
+        this.additional = additional;
         this._quantity = 0;
     }
 
@@ -36,6 +35,33 @@ class Product {
     addToCart() {
         console.log('test');
     }
+
+    render() {
+        const productList = document.querySelector(".products__list");
+
+        const container = document.createElement('div');
+        container.className = "product__container";
+
+        const title = document.createElement('h2');
+        const price = document.createElement('h3');
+        const additional = document.createElement('select');
+        const defaultOption = document.createElement('option');
+        defaultOption.textContent = 'Оберіть значення';
+        defaultOption.selected = true;
+        additional.append(defaultOption);
+
+        this.additional.forEach((item) => {
+            const option = document.createElement('option');
+            option.textContent = item;
+            additional.append(option);
+        })
+
+        title.textContent = this.title;
+        price.textContent = this.price;
+
+        container.append(title, price, additional);
+        productList.append(container);
+    }
 }
 
 class Coffee extends Product {
@@ -44,24 +70,22 @@ class Coffee extends Product {
     }
 }
 
-const item = {
-    title: "Product Test",
-    description: "Product Description Test",
-    type: "Product",
-    price: 1000
-};
-
-function uploadProdct(item) {
-    return new Promise((resolved, reject) => {
-        console.log(`Upload product ${item.title}`);
-
-        setTimeout(() => {
-            resolved(new Product(item));
-        }, 5000)
+function getAllProducts() { 
+    fetch("https://ajax.test-danit.com/api/v2/cards", {
+        headers: {
+            "Authorization": "Bearer 9a9dfcb9-fda9-4d28-9326-efe32196ba2c"
+        }
     })
+    .then((res) => res.json())
+    .then(array => {
+        console.log(array);
+        array.forEach((item => {
+            const currentProduct = new Product(item);
+            currentProduct.render();
+        }))
+    })
+
 }
 
-uploadProdct(item)
-    .then((product) => {
-        console.log(product);
-    })
+
+getAllProducts();
