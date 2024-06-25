@@ -1,3 +1,5 @@
+let cart = [];
+
 class Product {
     constructor({title, available, additional, price, id}) {
         this.id = id;
@@ -5,7 +7,8 @@ class Product {
         this.price = price;
         this.available = available;
         this.additional = additional;
-        this._quantity = 0;
+        this.selectedAdditional = 'Не обрано';
+        this._quantity = 1;
     }
 
     get quantity() {
@@ -33,7 +36,38 @@ class Product {
 
 
     addToCart() {
-        console.log('test');
+        const currentProduct = {
+            title: this.title,
+            id: this.id, 
+            quantity: this._quantity,
+            currentAdditional: this.selectedAdditional,
+            clientName: document.querySelector('#name').value
+        }
+        if (cart.length !== 0) {
+            let isFindProduct = {
+                id: undefined,
+                finded: false,
+                quantity: undefined
+            };
+            cart.forEach((item, index) => {
+                if (item.id === currentProduct.id) {
+                    isFindProduct.finded = true;
+                    isFindProduct.id = index;
+                    isFindProduct.quantity = item.quantity;
+                }
+            })
+
+            if (isFindProduct.finded) {
+                cart[isFindProduct.id].quantity += isFindProduct.quantity;
+            } else {
+                cart.push(currentProduct);
+            }
+        } else {
+            cart.push(currentProduct);
+        }
+        console.log(currentProduct);
+        console.log(cart);
+       
     }
 
     render() {
@@ -57,9 +91,19 @@ class Product {
         })
 
         title.textContent = this.title;
-        price.textContent = this.price;
+        price.textContent = `Ціна: ${this.price}`;
 
-        container.append(title, price, additional);
+        const btnCart = document.createElement('button');
+        btnCart.textContent = 'Додати в корзину';
+
+        btnCart.addEventListener('click', () => {
+            this.addToCart();
+        });
+        additional.addEventListener('change', () => {
+            this.selectedAdditional = additional.value;
+        })
+
+        container.append(title, price, additional, btnCart);
         productList.append(container);
     }
 }
