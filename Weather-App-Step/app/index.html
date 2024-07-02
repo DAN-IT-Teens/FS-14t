@@ -31,6 +31,7 @@
                     </button>
 
                     <button
+                        id="openSearchModal"
                         class="block rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
                         type="button">
                         Додати місто
@@ -40,7 +41,7 @@
         </div>
     </header>
 
-    <div class="grid h-screen place-content-center bg-white px-4">
+    <div id="clearWeatherApp" class="hidden grid h-screen place-content-center bg-white px-4">
         <div class="text-center">
             <h1 class="text-9xl font-black text-gray-200">404</h1>
 
@@ -48,14 +49,14 @@
 
             <p class="mt-4 text-gray-500">Скористуйтесь кнопкою "Додати місто", щоб скористуватись додатком.</p>
 
-            <a href="#"
+            <button id="openSearchModal" href="#"
                 class="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring">
                 Додати місто
-            </a>
+            </button>
         </div>
     </div>
 
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+    <div id="listWeatherApp" class="hidden grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
         <a href="#" class="relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8">
             <span
                 class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
@@ -174,6 +175,37 @@
         </a>
     </div>
 
+
+    <div id="searchModal" class="hidden relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+      
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+            <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+              <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <div>
+                  <div class="mt-3 text-center sm:mt-0 sm:text-center">
+                    <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Пошук міста</h3>
+                    <div class="mt-2">
+                        <label for="modalCity" class="block text-sm font-medium leading-6 text-gray-900">Введіть ваше місто</label>
+          <div class="mt-2">
+            <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+              <input type="text" name="modalCity" id="modalCity" autocomplete="city country country-name" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+            </div>
+          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <button id="submitSearchModal" type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Зберегти</button>
+                <button id="closeSearchModal" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Закрити</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="./scripts/script.ts"></script>
 </body>
